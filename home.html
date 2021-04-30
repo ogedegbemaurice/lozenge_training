@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+   <div class='jumbotron text-center'>
+        <img align="left" src="{{url_for('static', filename='images/LOZENGE LOGO.jpg')}}" alt="Lozenge" height="60" width="60">
+        <h1 style="font-family:verdana;">Welcome To Lozenge Training</h1>
+		<p class='lead'> This application is unique</p>
+       {% if session.logged_in == NULL %}
+            <a href="/signup" class="btn btn-primary btn-lg">Signup</a>
+            <a href="/login" class="btn btn-success btn-lg">Login</a>
+            <a href="/admin_login" class="btn btn-success btn-lg">Admin</a>
+       {% endif %}
+   </div>
+
+{% endblock %}
